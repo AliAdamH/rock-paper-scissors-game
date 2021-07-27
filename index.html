@@ -6,7 +6,18 @@
 </head>
 <body> <!-- We'll use script tags for this exercise | Linking a .js file is a better practice. -->
   <script>
+      function computerPlay() {
+          let randomNumber = Math.floor(Math.random() * 100);
+          if (randomNumber < 33) {
+              return "Rock";
+          } else if (randomNumber > 66) {
+              return "Scissors";
+          } else {
+              return "Paper";
+          }
+      }
 
+      console.log(computerPlay());
   </script>
 </body>
 </html>
