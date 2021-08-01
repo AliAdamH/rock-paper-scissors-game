@@ -3,53 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Rock Paper Scissors Game</title>
+  <script src="script.js" defer></script>
 </head>
 <body> <!-- We'll use script tags for this exercise | Linking a .js file is a better practice. -->
-  <script>
-      function computerPlay() {
-          let randomNumber = Math.floor(Math.random() * 100);
-          if (randomNumber < 33) {
-              return "rock";
-          } else if (randomNumber > 66) {
-              return "scissors";
-          } else {
-              return "paper";
-          }
-      }
-
-      function playRound (playerSelection, computerSelection) {
-          playerSelection = playerSelection.toLowerCase(); //Makes the entire string lowercase regardless of user input
-          if (playerSelection === computerSelection) {
-              return "It's a tie !";
-          }
-          switch(true){
-
-            case (playerSelection === 'rock' && computerSelection === 'scissors'): 
-            case (playerSelection === 'paper' && computerSelection === 'rock'):
-            case (playerSelection === 'scissors' && computerSelection === 'paper'):
-
-                return `You win ${playerSelection} beats ${computerSelection}`;
-
-            case (computerSelection=== 'rock' && playerSelection === 'scissors'): 
-            case (computerSelection === 'paper' && playerSelection === 'rock'):
-            case (computerSelection === 'scissors' && playerSelection === 'paper'):
-
-                return `You lose ${computerSelection} beats ${playerSelection}`;
-
-          }
-
-      }
-           
-      function game() {
-          for (let i = 1; i <= 5; i++) {
-              let playerSelection = prompt("Enter your choice (Rock,Paper,Scissors))");
-              let computerSelection = computerPlay();
-              let result = playRound(playerSelection,computerSelection);
-              console.log(`Round ${i} : ${result}`);
-          }
-          console.log("Game Over !");
-      }
-      game();
-  </script>
+    <div id="container" class="buttons">
+        <button id="rock" value="rock">Rock</button>
+        <button id="scissors" value="scissors">scissors</button>
+        <button id="paper" value="paper">Paper</button>
+    </div>
 </body>
 </html>
