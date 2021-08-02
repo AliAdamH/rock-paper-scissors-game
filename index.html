@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>Rock Paper Scissors Game</title>
-  <script src="script.js" defer></script>
+  <link href="styles/reset.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <script src="./js/script.js" defer></script>
 </head>
 <body> <!-- We'll use script tags for this exercise | Linking a .js file is a better practice. -->
     <div id="container" class="buttons">
-        <button id="rock" value="rock">Rock</button>
-        <button id="scissors" value="scissors">scissors</button>
-        <button id="paper" value="paper">Paper</button>
+        <div id="btn-container">
+            <button id="rock" value="rock" class="btn"></button>
+            <button id="paper" value="paper" class="btn"></button>
+            <button id="scissors" value="scissors" class="btn"></button>
+            
+        </div>
     </div>
 </body>
 </html>

@@ -8,6 +8,8 @@ let scores = document.createElement('div');
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', playRound));
 container.appendChild(result);
+result.classList.add('result');
+scores.classList.add('result');
 container.appendChild(scores);
 
 function computerPlay() {
@@ -24,7 +26,7 @@ function computerPlay() {
 function game (playerSelection,computerSelection) {
 
     if (playerSelection === computerSelection) {
-        result.textContent = "It's a tie !";
+        result.textContent = `Round ${roundNumber} :  It's a tie !`;
     }
     switch(true){
 
@@ -32,20 +34,19 @@ function game (playerSelection,computerSelection) {
         case (playerSelection === 'paper' && computerSelection === 'rock'):
         case (playerSelection === 'scissors' && computerSelection === 'paper'):
             playerScore++;
-            result.textContent = `You win ${playerSelection} beats ${computerSelection}`;
+            result.textContent = `Round ${roundNumber} : You win ! ${playerSelection} beats ${computerSelection}`;
             break;
 
         case (computerSelection=== 'rock' && playerSelection === 'scissors'): 
         case (computerSelection === 'paper' && playerSelection === 'rock'):
         case (computerSelection === 'scissors' && playerSelection === 'paper'):
             computerScore++;
-            result.textContent = `You lose ${computerSelection} beats ${playerSelection}`;
+            result.textContent = `Round ${roundNumber} : You lose ! ${computerSelection} beats ${playerSelection}`;
     }
     
 }
 
 function playRound (playerSelection) {
-    console.log(roundNumber);
     playerSelection = this.value;
     computerSelection = computerPlay();
     game(playerSelection,computerSelection);
@@ -68,6 +69,7 @@ function stopGame() {
     buttons.forEach(button => button.removeEventListener('click', playRound));
     const resetbtn = document.createElement('button');
     resetbtn.textContent = 'Click to reset the game';
+    resetbtn.classList.add('reset-btn');
     container.appendChild(resetbtn);
     resetbtn.addEventListener('click', () => { location.reload();
         return false;

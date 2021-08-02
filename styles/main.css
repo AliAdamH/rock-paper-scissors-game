@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body, html {
+    height: 100%;
+    display: grid;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    transition: all 0.2s ease;
+    border: none;
+
+    
+}
+.btn:hover {
+    transform: scale(1.1); 
+}
+
+.reset-btn {
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    background-color: red;
+}
+
+#container {
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.result {
+    width: 450px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#rock {
+    background: url(../assets/landslide.png);
+    background-size: 150px 150px;
+}
+
+#scissors {
+    background: url(../assets/cut-scissor.png);
+    background-size: 150px 150px;
+ 
+}
+
+#paper {
+    background: url(../assets/text-file.png);
+    background-size: 150px 150px;
+    
+}
+
+#btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
