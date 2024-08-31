@@ -1,72 +1,69 @@
 * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-body, html {
-    height: 100%;
-    display: grid;
+body,
+html {
+  height: 100%;
+  display: grid;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
 }
 
 .btn {
-    width: 150px;
-    height: 150px;
-    transition: all 0.2s ease;
-    border: none;
-
-    
+  width: 150px;
+  height: 150px;
+  transition: all 0.2s ease;
+  border: none;
 }
 .btn:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .reset-btn {
-    height: 40px;
-    width: 250px;
-    font-size: 15px;
-    font-weight: 800;
-    font-family: monospace, Arial, Helvetica, sans-serif;
-    background-color: red;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 #container {
-    width: 60vw;
-    height: 60vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 2rem;
 }
 
 .result {
-    width: 450px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
-    text-align: center;
+  width: 450px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
 }
 
 #rock {
-    background: url(../assets/landslide.png);
-    background-size: 150px 150px;
+  background: url(../assets/landslide.png);
+  background-size: 100% 100%;
 }
 
 #scissors {
-    background: url(../assets/cut-scissor.png);
-    background-size: 150px 150px;
- 
+  background: url(../assets/cut-scissor.png);
+  background-size: 100% 100%;
 }
 
 #paper {
-    background: url(../assets/text-file.png);
-    background-size: 150px 150px;
-    
+  background: url(../assets/text-file.png);
+  background-size: 100% 100%;
 }
 
 #btn-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 1.5rem;
 }
