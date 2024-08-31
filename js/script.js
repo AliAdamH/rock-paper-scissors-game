@@ -62,7 +62,7 @@ function playRound(playerSelection) {
 function stopGame() {
   buttons.forEach((button) => button.removeEventListener('click', playRound));
   const resetbtn = document.createElement('button');
-  resetbtn.textContent = 'Click to reset the game';
+  resetbtn.textContent = 'Reset the game';
   resetbtn.classList.add('reset-btn');
   container.appendChild(resetbtn);
   resetbtn.addEventListener('click', () => {
